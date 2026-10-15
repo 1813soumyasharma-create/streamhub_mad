@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Library"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTabHistory"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2563EB"
+            android:text="History"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnTabFavorites"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E293B"
+            android:text="Favorites"
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnTabNotes"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E293B"
+            android:text="Notes"
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <Button
+            android:id="@+id/btnExportCsv"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#2563EB"
+            android:text="Export CSV"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnImportCsv"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#334155"
+            android:text="Import CSV"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnAddNote"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#0D9488"
+            android:text="Add note (.txt)"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnClearHistory"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#DC2626"
+            android:text="Clear history"
+            android:textColor="@android:color/white" />
+    </GridLayout>
+
+</LinearLayout>

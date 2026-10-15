@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <!-- Fixed Video Player Container at Top -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#000000">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <!-- ASL PiP Window Overlay: Pure Pre-recorded ASL Video Stream -->
+        <FrameLayout
+            android:id="@+id/aslPipContainer"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="12dp"
+            android:background="#CC0F172A"
+            android:padding="2dp">
+
+            <VideoView
+                android:id="@+id/aslVideoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:background="#B3000000"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="2dp"
+                android:text="ASL Interpreter"
+                android:textColor="#38BDF8"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <!-- Scrollable Details & Comments Below -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvPlayerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Space Facts for Kids"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPlayerChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="NASA Kids - 12K views"
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLike"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#1E293B"
+                    android:text="Like"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnSubscribe"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#2563EB"
+                    android:text="Subscribe"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#1E293B"
+                    android:text="Share"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Accessibility Switches"
+                android:textColor="#38BDF8"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/switchPlayerAsl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="ASL"
+                    android:textColor="#94A3B8" />
+
+                <Switch
+                    android:id="@+id/switchPlayerAd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:checked="true"
+                    android:text="AD"
+                    android:textColor="#94A3B8" />
+
+                <Switch
+                    android:id="@+id/switchPlayerCc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:checked="true"
+                    android:text="CC"
+                    android:textColor="#94A3B8" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Comments (Firebase)"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etComment"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="#1E293B"
+                android:hint="Add a comment..."
+                android:paddingHorizontal="12dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="#94A3B8" />
+
+            <Button
+                android:id="@+id/btnPostComment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#2563EB"
+                android:text="Post Comment"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

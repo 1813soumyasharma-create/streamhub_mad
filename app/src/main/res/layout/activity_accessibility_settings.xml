@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt; Accessibility"
+            android:textColor="#38BDF8"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Live preview (custom Canvas view)"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:background="#1E293B">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="[ Custom Canvas Live PreviewPalette ]"
+                android:textColor="#38BDF8"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Color mode (Spinner)"
+            android:textColor="#94A3B8"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/spinnerColorMode"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="#1E293B" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Haptic intensity"
+            android:textColor="#94A3B8"
+            android:textSize="14sp" />
+
+        <SeekBar
+            android:id="@+id/seekHaptic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progress="75" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Speech rate (TTS)"
+            android:textColor="#94A3B8"
+            android:textSize="14sp" />
+
+        <SeekBar
+            android:id="@+id/seekSpeech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progress="50" />
+
+        <Switch
+            android:id="@+id/switchNarrate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:text="Narrate every screen"
+            android:textColor="#94A3B8" />
+
+        <Switch
+            android:id="@+id/switchHapticPattern"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="Haptic patterns"
+            android:textColor="#94A3B8" />
+
+        <Switch
+            android:id="@+id/switchCaptionBg"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="Caption background"
+            android:textColor="#94A3B8" />
+
+        <Button
+            android:id="@+id/btnTestHaptics"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#F59E0B"
+            android:text="Test haptics + voice"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

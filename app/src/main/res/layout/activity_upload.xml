@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload video"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="16dp"
+            android:background="#1E293B">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Thumbnail preview"
+                android:textColor="#94A3B8"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnGallery"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="#334155"
+                android:text="Gallery"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#2563EB"
+                android:text="Camera"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="#1E293B"
+            android:hint="Title"
+            android:paddingHorizontal="12dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#94A3B8" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:background="#1E293B"
+            android:gravity="top"
+            android:hint="Description"
+            android:padding="12dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#94A3B8" />
+
+        <CheckBox
+            android:id="@+id/cbAsl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:text="Include ASL interpreter video"
+            android:textColor="#94A3B8" />
+
+        <CheckBox
+            android:id="@+id/cbAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="Include audio description track"
+            android:textColor="#94A3B8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPickDate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1E293B"
+                android:text="Pick date"
+                android:textColor="#38BDF8" />
+
+            <Button
+                android:id="@+id/btnPickTime"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1E293B"
+                android:text="Pick time"
+                android:textColor="#38BDF8" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPublish"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#2563EB"
+            android:text="Publish"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>
